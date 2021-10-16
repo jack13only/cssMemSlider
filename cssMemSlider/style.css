@@ -1,0 +1,94 @@
+html, body {
+    height: 100%; 
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: rgba(204, 255, 192, 0.322);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 32px;
+}
+
+.slider-main-wrapper {
+    border: 1px red solid;
+    margin: 0 auto;
+    margin-top: 300px;
+    width: 700px;
+    display: grid;
+    grid-template-columns: 500px 200px;
+    grid-template-rows: 450px 1fr
+}
+
+.slider-wrapper {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.slider-pic-1 {
+    width: 0;
+    overflow: hidden;
+}
+
+input {
+    display: none;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+label {
+    width: 30px;
+    height: 30px;
+    background-color: aqua;
+}
+
+.pic-1 {
+    background: url('./assets/slide-1.jpg') no-repeat center;
+}
+
+.pic-2 {
+    background: url('./assets/slide-2.jpg') no-repeat center;
+}
+
+.pic-3 {
+    background: url('./assets/slide-3.jpg') no-repeat center;
+}
+
+.pic-4 {
+    background: url('./assets/slide-4.jpg') no-repeat center;
+}
+
+.slider-wrapper > div {
+    background-size: cover;
+    height: auto;
+    transition: 1s linear;
+}
+
+.slider-wrapper {
+    display: flex;
+}
+
+#bullet1:checked ~ .slider-wrapper > .pic-1 {
+    flex-grow: 1;
+}
+
+#bullet2:checked ~ .slider-wrapper > .pic-2 {
+    flex-grow: 1;
+}
+
+#bullet3:checked ~ .slider-wrapper > .pic-3 {
+    flex-grow: 1;
+}
+
+#bullet4:checked ~ .slider-wrapper > .pic-4 {
+    flex-grow: 1;
+}

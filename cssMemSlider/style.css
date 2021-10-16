@@ -17,11 +17,12 @@ html, body {
 .slider-main-wrapper {
     border: 1px red solid;
     margin: 0 auto;
-    margin-top: 300px;
-    width: 700px;
+    margin-top: 20vh;
+    width: 50vw;
     display: grid;
-    grid-template-columns: 500px 200px;
-    grid-template-rows: 450px 1fr
+    grid-template-columns: 40vw 10vw;
+    grid-template-rows: 32.14vw 5vw;
+    row-gap: 3vh;
 }
 
 .slider-wrapper {
@@ -43,6 +44,8 @@ input {
 .controls {
     display: flex;
     gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 label {
@@ -70,7 +73,7 @@ label {
 .slider-wrapper > div {
     background-size: cover;
     height: auto;
-    transition: 1s linear;
+    transition: 0.2s linear;
 }
 
 .slider-wrapper {
@@ -91,4 +94,42 @@ label {
 
 #bullet4:checked ~ .slider-wrapper > .pic-4 {
     flex-grow: 1;
+}
+
+.slider-text-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.slider-text-wrapper > div {
+    transition: 0.2s linear;
+    flex-basis: 0;
+    width: 0;
+    overflow: hidden;
+    max-height: 2vw;
+    opacity: 0;
+}
+
+#bullet1:checked ~ .slider-text-wrapper > .text-1 {
+    flex-grow: 1;
+    flex-basis: 100%;
+    opacity: 1;
+}
+
+#bullet2:checked ~ .slider-text-wrapper > .text-2 {
+    flex-grow: 1;
+    flex-basis: 100%;
+    opacity: 1;
+}
+
+#bullet3:checked ~ .slider-text-wrapper > .text-3 {
+    flex-grow: 1;
+    flex-basis: 100%;
+    opacity: 1;
+}
+
+#bullet4:checked ~ .slider-text-wrapper > .text-4 {
+    flex-grow: 1;
+    flex-basis: 100%;
+    opacity: 1;
 }

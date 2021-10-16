@@ -3,7 +3,7 @@ html, body {
     width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background-color: rgba(0, 0, 0, 0.303);
+    background-color: rgba(0, 0, 0, 0.103);
 }
 
 * {
@@ -24,6 +24,8 @@ html, body {
     grid-template-columns: 56vmin 19vmin;
     grid-template-rows: 75vmin 1fr;
     row-gap: 3vmin;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    border-radius: 20px;
 }
 
 .slider-wrapper {
@@ -61,7 +63,7 @@ label {
 label > div {
     width: 2vmin;
     height: 2vmin;
-    background-color: yellowgreen;
+    background-color: rgb(255, 210, 10);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -167,19 +169,19 @@ label > div > div {
 }
 
 #bullet1:checked ~ .controls > label:nth-child(1) > div > div {
-    background-color: yellowgreen;
+    background-color: rgb(255, 210, 10);
 }
 
 #bullet2:checked ~ .controls > label:nth-child(2) > div > div {
-    background-color: yellowgreen;
+    background-color: rgb(255, 210, 10);
 }
 
 #bullet3:checked ~ .controls > label:nth-child(3) > div > div {
-    background-color: yellowgreen;
+    background-color: rgb(255, 210, 10);
 }
 
 #bullet4:checked ~ .controls > label:nth-child(4) > div > div {
-    background-color: yellowgreen;
+    background-color: rgb(255, 210, 10);
 }
 
 /* INTERACTIVE */
@@ -193,18 +195,40 @@ label:hover .check-wrap {
 }
 
 .label1:active .label1-check-wrap {
-    background-color: rgb(255, 210, 10);
+    background-color: yellowgreen;
 }
 
 .label2:active .label2-check-wrap {
-    background-color: rgb(255, 210, 10);
+    background-color: yellowgreen;
 }
 
 .label3:active .label3-check-wrap {
-    background-color: rgb(255, 210, 10);
+    background-color: yellowgreen;
 }
 
 .label4:active .label4-check-wrap {
-    background-color: rgb(255, 210, 10);
+    background-color: yellowgreen;
 }
 
+@media screen and (max-width: 768px) {
+    .slider-main-wrapper {
+        margin-top: calc((100vh - 80vmin) / 2);
+        width: 80vmin;
+        grid-template-columns: 75vmin;
+        grid-template-rows: 75vmin 1fr 1fr;
+    }
+
+    .slider-wrapper {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .controls {
+        justify-content: center;
+        order: 2;
+    }
+
+    .slider-text-wrapper {
+        order: 3;
+    }
+}

@@ -18,7 +18,8 @@ html, body {
     padding: 2.5vmin;
     background-color: black;
     margin: 0 auto;
-    margin-top: 10vmin;
+    /* margin-top: 10vmin; */
+    margin-top: calc((100vh - 90vmin) / 2);
     display: grid;
     width: 80vmin;
     grid-template-columns: 56vmin 19vmin;
@@ -68,6 +69,7 @@ label > div {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.2s linear;
 }
 
 label > div > div {
@@ -75,6 +77,7 @@ label > div > div {
     height: 1.6vmin;
     background-color: rgb(0, 0, 0);
     border-radius: 50%;
+    transition: 0.2s linear;
 }
 
 
@@ -212,7 +215,7 @@ label:hover .check-wrap {
 
 @media screen and (max-width: 768px) {
     .slider-main-wrapper {
-        margin-top: calc((100vh - 80vmin) / 2);
+        margin-top: calc((100vh - 90vmin) / 2);
         width: 80vmin;
         grid-template-columns: 75vmin;
         grid-template-rows: 75vmin 1fr 1fr;

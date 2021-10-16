@@ -123,14 +123,6 @@ label > div > div {
     font-size: 2.5vmin;
 }
 
-label:hover {
-    cursor: pointer;
-}
-
-label:hover .check, label:hover .check-wrap {
-    background-color: white;
-}
-
 
 /* CHOOSE BULLETS*/
 
@@ -174,18 +166,45 @@ label:hover .check, label:hover .check-wrap {
     flex-grow: 1;
 }
 
-#bullet1:checked ~ .label1-check {
+#bullet1:checked ~ .controls > label:nth-child(1) > div > div {
     background-color: yellowgreen;
 }
 
-#bullet2:checked ~ label > div > div {
-    background-color: rgb(205, 50, 50);
-}
-
-#bullet3:checked ~ .label3-check {
+#bullet2:checked ~ .controls > label:nth-child(2) > div > div {
     background-color: yellowgreen;
 }
 
-#bullet4:checked ~ .label4-check {
+#bullet3:checked ~ .controls > label:nth-child(3) > div > div {
     background-color: yellowgreen;
 }
+
+#bullet4:checked ~ .controls > label:nth-child(4) > div > div {
+    background-color: yellowgreen;
+}
+
+/* INTERACTIVE */
+
+label:hover {
+    cursor: pointer;
+}
+
+label:hover .check-wrap {
+    background-color: white;
+}
+
+.label1:active .label1-check-wrap {
+    background-color: rgb(255, 210, 10);
+}
+
+.label2:active .label2-check-wrap {
+    background-color: rgb(255, 210, 10);
+}
+
+.label3:active .label3-check-wrap {
+    background-color: rgb(255, 210, 10);
+}
+
+.label4:active .label4-check-wrap {
+    background-color: rgb(255, 210, 10);
+}
+
